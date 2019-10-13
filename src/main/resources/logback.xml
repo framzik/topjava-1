@@ -5,7 +5,7 @@
     <jmxConfigurator/>
 
     <appender name="file" class="ch.qos.logback.core.FileAppender">
-        <file>${TOPJAVA_ROOT}/log/topjava.log</file>
+        <file>${TOPJAVA_ROOT}/log/topjava-1.log</file>
 
         <encoder>
             <charset>UTF-8</charset>
