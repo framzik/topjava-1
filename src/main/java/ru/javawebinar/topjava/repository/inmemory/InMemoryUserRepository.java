@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import ru.javawebinar.topjava.model.Role;
 import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.repository.UserRepository;
-import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -20,10 +19,8 @@ public class InMemoryUserRepository implements UserRepository {
     public static final Comparator<User> COMPARE_BY_NAME = (o1, o2) -> o1.getName().compareTo(o2.getName());
 
     {
-        List<User> userList = Arrays.asList(
-                new User(counter.incrementAndGet(), "Vasya", "fr@mail.ru", "21", Role.ROLE_USER),
-                new User(counter.incrementAndGet(), "Petya", "rf@mail.ru", "12", Role.ROLE_ADMIN)
-        );
+        repository.put(counter.incrementAndGet(),new User(counter.get(), "Vasya", "fr@mail.ru", "21", Role.ROLE_USER));
+        repository.put(counter.incrementAndGet(),new User(counter.get(), "Petya", "rf@mail.ru", "12", Role.ROLE_ADMIN));
     }
 
     @Override
@@ -50,11 +47,11 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public List<User> getAll() {
+    public Collection<User> getAll() {
         log.info("getAll");
-        List<User> list = new ArrayList<>(repository.values());
-        list.sort(COMPARE_BY_NAME);
-        return list;
+        //List<User> list = new ArrayList<>(repository.values());
+        //list.sort(COMPARE_BY_NAME);
+        return repository.values();
     }
 
     @Override
