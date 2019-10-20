@@ -13,4 +13,6 @@ INSERT INTO user_roles (role, user_id) VALUES
 
 INSERT INTO meals(user_id, description, calories) VALUES
     (100000, 'Хавчик', 500),
+    (100000,'SuperHAvKA',120),
+    (100000,'VASYA!GIIIR',2000),
     (100001, 'Dolma', 300);
