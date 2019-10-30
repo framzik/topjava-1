@@ -2,6 +2,7 @@ Java Enterprise Online Project
 ===============================
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5cab5a7484a449d9b08fd50885a1e22e)](https://www.codacy.com/manual/framzik/topjava-1?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=framzik/topjava-1&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/framzik/topjava-1.svg?branch=master)](https://travis-ci.org/framzik/topjava-1)
+
 Наиболее востребованные технологии /инструменты / фреймворки Java Enterprise:
 Maven/ Spring/ Security/ JPA(Hibernate)/ REST(Jackson)/ Bootstrap(CSS)/ jQuery + plugins.
 
