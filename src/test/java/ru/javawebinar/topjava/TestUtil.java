@@ -23,4 +23,5 @@ public class TestUtil {
     public static <T> List<T> readListFromJsonMvcResult(MvcResult result, Class<T> clazz) throws UnsupportedEncodingException {
         return JsonUtil.readValues(getContent(result), clazz);
     }
+
 }
