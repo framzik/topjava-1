@@ -14,12 +14,12 @@ import static ru.javawebinar.topjava.UserTestData.*;
 
 @ActiveProfiles(DATAJPA)
 class DataJpaUserServiceTest extends AbstractUserServiceTest {
-        @Test
-        void getWithMeals() throws Exception {
-            User admin = service.getWithMeals(ADMIN_ID);
-            assertMatch(admin, ADMIN);
-            MealTestData.assertMatch(admin.getMeals(), MealTestData.ADMIN_MEAL2, MealTestData.ADMIN_MEAL1);
-        }
+    @Test
+    void getWithMeals() throws Exception {
+        User admin = service.getWithMeals(ADMIN_ID);
+        USER_MATCHERS.assertMatch(admin, ADMIN);
+        MealTestData.MEAL_MATCHERS.assertMatch(admin.getMeals(), MealTestData.ADMIN_MEAL2, MealTestData.ADMIN_MEAL1);
+    }
 
         @Test
         void getWithMealsNotFound() throws Exception {
